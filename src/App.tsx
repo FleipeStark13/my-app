@@ -32,6 +32,9 @@ function App() {
       useCORS: true,
       backgroundColor: null, // Remove fundo branco
       logging: false,
+      foreignObjectRendering: false,
+      allowTaint: true,
+      imageTimeout: 0
     } as any);
 
     const dataURL = canvas.toDataURL("image/jpeg", 0.95);
