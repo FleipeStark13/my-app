@@ -7,6 +7,7 @@
     border-radius: 20px;
     box-sizing: border-box; /* Importante para o padding não aumentar o tamanho total */
     box-shadow: 0 20px 30px black;
+    overflow: hidden; /* Importante: garante que o gradient não vaze fora do border-radius */
 }
 
 .content {
@@ -18,6 +19,8 @@
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box; /* Importante */
+    position: relative; /* Adicione isso para criar um novo contexto de empilhamento */
+    z-index: 2; /* z-index maior que o background */
 }
 
 .content > * {
@@ -45,7 +48,7 @@
     height: 100%;
     bottom: 0;
     left: 0;
-    z-index: 1;
+    z-index: -1;
     position: absolute;
 }
 
